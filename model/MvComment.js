@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const schema = new mongoose.Schema({
     tid:{type:String},
-    user:{
+    user_id:{
         type:mongoose.Schema.Types.ObjectId,
         ref:'User',
     },

@@ -18,6 +18,7 @@ app.set('secret','sdasdsadsad')
 require('./router/admin')(app)
 require('./router/user')(app)
 require('./router/comment')(app)
+require('./router/liked')(app)
 require('./plugins/db')(app)
 
 

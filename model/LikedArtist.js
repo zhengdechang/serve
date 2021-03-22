@@ -7,8 +7,7 @@ const schema = new mongoose.Schema({
         ref:'User',
     },
     time:{type:String,default:(new Date()).getTime()},
-    content:{type:String},
-    likecount:{type:String},
+
 })
 
-module.exports =mongoose.model('SongComment',schema)
+module.exports =mongoose.model('LikedArtist',schema)
