@@ -12,7 +12,7 @@ module.exports = app =>{
     })
     //单曲获取接口
     app.get(`/admin/api/likedsong/:user_id`,async (req,res) =>{
-        const model = await LikedSong.find({'user_id':req.params.user_id})
+        const model = await LikedSong.find({'user_id':req.params.user_id}).populate('user_id')
         res.send(model)
     })
 
