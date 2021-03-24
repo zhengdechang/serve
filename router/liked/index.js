@@ -36,7 +36,7 @@ module.exports = app =>{
         res.send(model)
     })
 
-    //取消收藏
+    //歌单取消收藏
     app.delete('/admin/api/likedalbum/delete/:tid',async (req,res) =>{
         await LikedAlbum.findOneAndDelete({'tid':req.params.tid})
         res.send({
