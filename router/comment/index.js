@@ -21,7 +21,7 @@ module.exports = app =>{
     })
 
     //admin单曲评论获取
-    app.get(`/admin/api/comment/singer/song/:_id`,async (req,res) =>{
+    app.get(`/admin/api/comment/single/song/:_id`,async (req,res) =>{
         const model = await SongComment.findById(req.params._id).populate('user_id')
         res.send(model)
     })
@@ -67,7 +67,7 @@ module.exports = app =>{
     })
 
     //admin 单mv评论获取
-    app.get(`/admin/api/comment/singer/mv/:_id`,async (req,res) =>{
+    app.get(`/admin/api/comment/single/mv/:_id`,async (req,res) =>{
         const model = await MvComment.findById(req.params._id).populate('user_id')
         res.send(model)
     })
@@ -106,7 +106,7 @@ module.exports = app =>{
     })
 
     //admin专辑评论获取
-    app.get(`/admin/api/comment/singer/album/:_id`,async (req,res) =>{
+    app.get(`/admin/api/comment/single/album/:_id`,async (req,res) =>{
         const model = await AlbumComment.findById(req.params._id).populate('user_id')
         res.send(model)
     })
