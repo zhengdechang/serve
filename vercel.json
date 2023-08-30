@@ -6,10 +6,4 @@
       "use": "@vercel/node@2.5.10"
     }
   ],
-  "routes": [
-    {
-      "router": "/(.*)",
-      "dest": "/"
-    }
-  ]
 }
