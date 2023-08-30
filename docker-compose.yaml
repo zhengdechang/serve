@@ -1,0 +1,7 @@
+version: '2'
+services:
+  app:
+    container_name: serve
+	  image: serve
+    restart: always
+    network_mode: "host"
