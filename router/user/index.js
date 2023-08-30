@@ -74,21 +74,21 @@ module.exports = (app) => {
   // const singleMidle = upload.single("head"); //一次处理一张head字段名的文件，字段名一定要对应！
 
   //接收过来的头像文件
-  app.post(
-    "/admin/api/user/changeImg/:id",
-    singleMidle,
-    function (req, res, next) {
-      console.log(req.file);
-      let file = req.file;
-      //文件改名保存
-      // fs.renameSync('uploads/' + file.filename, 'uploads/' + file.originalname);//这里修改文件名字
-      // fs.renameSync(
-      //   "uploads/" + file.filename,
-      //   "uploads/" + req.params.id + ".jpg"
-      // ); //这里修改文件名字
-      res.send(req.params.id);
-    }
-  );
+  // app.post(
+  //   "/admin/api/user/changeImg/:id",
+  //   singleMidle,
+  //   function (req, res, next) {
+  //     console.log(req.file);
+  //     let file = req.file;
+  //     //文件改名保存
+  //     // fs.renameSync('uploads/' + file.filename, 'uploads/' + file.originalname);//这里修改文件名字
+  //     // fs.renameSync(
+  //     //   "uploads/" + file.filename,
+  //     //   "uploads/" + req.params.id + ".jpg"
+  //     // ); //这里修改文件名字
+  //     res.send(req.params.id);
+  //   }
+  // );
 
   //获得用户头像src
   app.get("/admin/api/user/getImg/:id", function (req, res) {
