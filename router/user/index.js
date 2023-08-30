@@ -1,5 +1,5 @@
 /*
- * @Description: 
+ * @Description:
  * @Author: Devin
  * @Date: 2023-08-30 14:00:04
  */
@@ -68,8 +68,8 @@ module.exports = (app) => {
 
   //处理照片插件
   const multer = require("multer"); // 引入 multer模块
-  const upload = multer({ dest: "uploads/" }); // 配置图片文件的路径(没有后缀名)
-  let fs = require("fs");
+  // const upload = multer({ dest: "uploads/" }); // 配置图片文件的路径(没有后缀名)
+  // let fs = require("fs");
   //上传用户头像接口
   const singleMidle = upload.single("head"); //一次处理一张head字段名的文件，字段名一定要对应！
 
@@ -82,16 +82,16 @@ module.exports = (app) => {
       let file = req.file;
       //文件改名保存
       // fs.renameSync('uploads/' + file.filename, 'uploads/' + file.originalname);//这里修改文件名字
-      fs.renameSync(
-        "uploads/" + file.filename,
-        "uploads/" + req.params.id + ".jpg"
-      ); //这里修改文件名字
+      // fs.renameSync(
+      //   "uploads/" + file.filename,
+      //   "uploads/" + req.params.id + ".jpg"
+      // ); //这里修改文件名字
       res.send(req.params.id);
     }
   );
 
   //获得用户头像src
   app.get("/admin/api/user/getImg/:id", function (req, res) {
-    res.sendFile(process.cwd() + "/uploads/" + req.params.id + ".jpg"); //服务器该文件的绝对路径
+    // res.sendFile(process.cwd() + "/uploads/" + req.params.id + ".jpg"); //服务器该文件的绝对路径
   });
 };
