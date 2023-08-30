@@ -71,7 +71,7 @@ module.exports = (app) => {
   // const upload = multer({ dest: "uploads/" }); // 配置图片文件的路径(没有后缀名)
   // let fs = require("fs");
   //上传用户头像接口
-  const singleMidle = upload.single("head"); //一次处理一张head字段名的文件，字段名一定要对应！
+  // const singleMidle = upload.single("head"); //一次处理一张head字段名的文件，字段名一定要对应！
 
   //接收过来的头像文件
   app.post(
