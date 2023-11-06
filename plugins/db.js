@@ -6,3 +6,6 @@ module.exports = (app) => {
     useUnifiedTopology: true,
   });
 };
+
+
+//MONGODB_URL : mongodb+srv://user:password@cluster0.b9vurxx.mongodb.net/node-vue-moba?retryWrites=true&w=majority
